@@ -1,15 +1,4 @@
 <!-- markdownlint-disable -->
-<p align="center">
-  <img src="logo.svg" width="320" alt="TensorBinge" />
-</p>
-
-<h1 align="center">TensorBinge</h1>
-
-<p align="center">
-  Research at the intersection of machine learning, quantitative finance, and language models.
-</p>
-
----
 
 ## About
 
@@ -50,8 +39,3 @@ We work in public. Experiments ship as repositories. Notes become papers when th
 3. **Incremental publication** — share intermediate findings early, iterate in public
 4. **Rigour without gatekeeping** — high standards, low barriers to entry
 
----
-
-<p align="center">
-  <sub>TensorBinge · open research · open source</sub>
-</p>
