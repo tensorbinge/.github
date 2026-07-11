@@ -2,7 +2,7 @@
 
 ## About
 
-TensorBinge is an open research collective focused on rigorous, reproducible work across three domains:
+Tensorbinge is an open research collective focused on rigorous, reproducible work across three domains:
 
 - **Machine Learning** — deep learning theory, optimization, representation learning, and neural architectures
 - **Quantitative Finance** — systematic strategy research, statistical arbitrage, risk modelling, and market microstructure

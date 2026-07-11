@@ -18,5 +18,5 @@
     <line x1="14" y1="19" x2="17.5" y2="14.2" stroke="#8b949e" stroke-width="0.5" opacity="0.50" marker-end="url(#arrow)"/>
     <line x1="14" y1="21" x2="17.5" y2="25.8" stroke="#8b949e" stroke-width="0.5" opacity="0.50" marker-end="url(#arrow)"/>
   </g>
-  <text x="220" y="395" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="32"><tspan font-weight="700" fill="#1a1a2e">Tensor</tspan><tspan font-weight="400" fill="#8b949e">[Binge]</tspan></text>
+  <text x="220" y="395" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="32"><tspan font-weight="700" fill="#1a1a2e">Tensor</tspan><tspan font-weight="400" fill="#8b949e">[binge]</tspan></text>
 </svg>

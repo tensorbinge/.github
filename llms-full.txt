@@ -1,4 +1,4 @@
-# TensorBinge
+# Tensorbinge
 
 Open research collective building tools at the intersection of machine
 learning, quantitative finance, and systems engineering.
@@ -38,4 +38,4 @@ language models to real problems with rigorous measurement.
 ## Links
 
 - Blog: https://blog.tensorbinge.com
-- GitHub: https://github.com/TensorBinge
+- GitHub: https://github.com/tensorbinge
