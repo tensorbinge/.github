@@ -6,7 +6,7 @@
 - [Simulor](https://pypi.org/project/simulor/): Event-driven quantitative
   backtesting framework with realistic execution models.
 - [LogRoller](https://crates.io/crates/logroller): Log rotation library
-  for Rust — size-based, time-based, and hybrid strategies. Zero runtime
+  for Rust - size-based, time-based, and hybrid strategies. Zero runtime
   overhead after rotation.
 - [MarkScope](https://markscope.tensorbinge.com): Cross-platform Markdown
   previewer with live rendering, syntax highlighting, and AI-assisted
