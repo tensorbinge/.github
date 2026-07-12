@@ -5,20 +5,16 @@ learning, quantitative finance, and systems engineering.
 
 ## Products
 
+### Ticklog
+High-performance logging library for Rust. ~10 ns per call with
+lock-free per-thread buffers and a background drain thread — built
+for HFT and latency-sensitive systems.
+https://crates.io/crates/ticklog
+
 ### Simulor
 Event-driven quantitative backtesting framework. Simulate strategies
 against historical data with realistic execution models.
 https://pypi.org/project/simulor/
-
-### LogRoller
-Log rotation library for Rust. Size-based, time-based, and hybrid
-strategies. Zero runtime overhead after rotation.
-https://crates.io/crates/logroller
-
-### MarkScope
-Cross-platform Markdown previewer with live rendering, syntax
-highlighting, and AI-assisted editing.
-https://markscope.tensorbinge.com
 
 ## Research
 

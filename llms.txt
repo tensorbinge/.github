@@ -3,14 +3,11 @@
 > learning, quantitative finance, and systems engineering.
 
 ## Products
+- [Ticklog](https://crates.io/crates/ticklog): High-performance logging
+  library for Rust. ~10 ns per call with lock-free per-thread buffers and
+  a background drain thread, built for latency-sensitive systems, e.g. HFT.
 - [Simulor](https://pypi.org/project/simulor/): Event-driven quantitative
   backtesting framework with realistic execution models.
-- [LogRoller](https://crates.io/crates/logroller): Log rotation library
-  for Rust - size-based, time-based, and hybrid strategies. Zero runtime
-  overhead after rotation.
-- [MarkScope](https://markscope.tensorbinge.com): Cross-platform Markdown
-  previewer with live rendering, syntax highlighting, and AI-assisted
-  editing.
 
 ## Research
 - **Machine Learning:** Deep learning theory, optimization, neural
