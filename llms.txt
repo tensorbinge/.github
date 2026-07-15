@@ -21,5 +21,4 @@
   measurement.
 
 ## Links
-- Blog: https://blog.tensorbinge.com
 - GitHub: https://github.com/tensorbinge
