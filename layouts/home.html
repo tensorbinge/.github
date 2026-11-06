@@ -1,70 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tensorbinge - tools at the intersection of ML, quant finance & systems</title>
-  <meta name="description" content="Tensorbinge is an open research collective. We build tools at the intersection of machine learning, quantitative finance, and systems engineering.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://tensorbinge.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tensorbinge - tools at the intersection of ML, quant finance & systems">
-  <meta property="og:description" content="Tensorbinge is an open research collective. We build tools at the intersection of machine learning, quantitative finance, and systems engineering.">
-  <meta property="og:image" content="https://tensorbinge.com/logo.svg">
-  <meta property="og:url" content="https://tensorbinge.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Tensorbinge">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Tensorbinge - tools at the intersection of ML, quant finance & systems">
-  <meta name="twitter:description" content="Tensorbinge is an open research collective. We build tools at the intersection of machine learning, quantitative finance, and systems engineering.">
-  <meta name="twitter:image" content="https://tensorbinge.com/logo.svg">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tensorbinge",
-    "url": "https://tensorbinge.com",
-    "logo": "https://tensorbinge.com/logo.svg",
-    "description": "Open research collective building tools at the intersection of machine learning, quantitative finance, and systems engineering.",
-    "sameAs": [
-      "https://github.com/tensorbinge"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Tensorbinge",
-    "url": "https://tensorbinge.com",
-    "description": "Tools at the intersection of machine learning, quantitative finance, and systems engineering."
-  }
-  </script>
-
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <nav class="nav">
-    <a href="/" class="nav-wordmark" aria-label="Tensorbinge home">
-      <img src="logo.svg" class="nav-icon" width="28" height="28" alt="">
-      <span class="wordmark">
-        <span class="wordmark-tensor">Tensor</span><span class="wordmark-binge">[binge]</span>
-      </span>
-    </a>
-    <div class="nav-links">
-      <a target="_blank" rel="noopener external" href="https://github.com/tensorbinge" class="nav-link">GitHub</a>
-    </div>
-  </nav>
-
-  <main id="main-content">
+{{ define "main" }}
     <!-- Thesis -->
     <h1 class="thesis">
       We build <span class="thesis-accent">tools</span> at the intersection of machine learning, quantitative finance &amp; systems engineering.
@@ -111,20 +45,7 @@
     </section>
 
     <!-- Network-graph divider -->
-    <div class="divider" aria-hidden="true">
-      <span class="divider-line"></span>
-      <svg class="divider-graph" width="56" height="20" viewBox="0 0 80 30">
-        <circle cx="20" cy="15" r="3" fill="none" stroke="#8b5e1a" stroke-width="1"/>
-        <circle cx="40" cy="8" r="2.5" fill="none" stroke="#8b5e1a" stroke-width="0.8"/>
-        <circle cx="40" cy="22" r="2.5" fill="none" stroke="#8b5e1a" stroke-width="0.8"/>
-        <circle cx="60" cy="15" r="3" fill="none" stroke="#8b5e1a" stroke-width="1"/>
-        <line x1="23" y1="15" x2="37" y2="8"  stroke="#b07828" stroke-width="0.4"/>
-        <line x1="23" y1="15" x2="37" y2="22" stroke="#b07828" stroke-width="0.4"/>
-        <line x1="43" y1="8"  x2="57" y2="15" stroke="#b07828" stroke-width="0.4"/>
-        <line x1="43" y1="22" x2="57" y2="15" stroke="#b07828" stroke-width="0.4"/>
-      </svg>
-      <span class="divider-line"></span>
-    </div>
+    {{ partial "divider.html" . }}
 
     <!-- Research -->
     <section class="section">
@@ -144,7 +65,4 @@
         </div>
       </div>
     </section>
-  </main>
-
-</body>
-</html>
+{{ end }}

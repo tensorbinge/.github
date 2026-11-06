@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ $title := .Title }}
+  {{ $description := site.Params.description }}
+  {{ if .IsHome }}
+    {{ $title = "Tensorbinge - tools at the intersection of ML, quant finance & systems" }}
+    {{ $description = "Tensorbinge is an open research collective. We build tools at the intersection of machine learning, quantitative finance, and systems engineering." }}
+  {{ else if .Params.description }}
+    {{ $description = .Params.description }}
+  {{ end }}
+  <title>{{ $title }}{{ if not .IsHome }} - {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ $description }}">
+  <meta name="robots" content="index, follow">
+  {{ block "canonical" . }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
+  {{ $pageURL := .Permalink }}
+  {{ with .Scratch.Get "canonicalURL" }}{{ $pageURL = . }}{{ end }}
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ "og-default.png" | absURL }}">
+  <meta property="og:url" content="{{ $pageURL }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  {{ if .IsPage }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ "og-default.png" | absURL }}">
+
+  <!-- Structured Data -->
+  {{ partial "schema-org.html" . }}
+
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {{ partial "nav.html" . }}
+
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

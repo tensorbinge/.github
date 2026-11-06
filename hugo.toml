@@ -1,0 +1,30 @@
+baseURL = "https://tensorbinge.com/"
+title = "Tensorbinge"
+locale = "en"
+enableRobotsTXT = false
+
+[taxonomies]
+  tag = "tags"
+
+[pagination]
+  pagerSize = 20
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)'], ['$', '$']]
+
+[markup.highlight]
+  noClasses = false
+  style = "github"
+  lineNos = false
+
+[services.rss]
+  limit = 20
+
+[params]
+  description = "Tools at the intersection of machine learning, quantitative finance, and systems engineering."
+  blogTitle = "Writing"
+  blogDescription = "Essays and technical notes from Tensorbinge."
+  latestPostsOnHome = 3

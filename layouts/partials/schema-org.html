@@ -1,0 +1,57 @@
+{{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tensorbinge",
+    "url": "https://tensorbinge.com",
+    "logo": "https://tensorbinge.com/logo.svg",
+    "description": "Open research collective building tools at the intersection of machine learning, quantitative finance, and systems engineering.",
+    "sameAs": [
+      "https://github.com/tensorbinge"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tensorbinge",
+    "url": "https://tensorbinge.com",
+    "description": "Tools at the intersection of machine learning, quantitative finance, and systems engineering."
+  }
+  </script>
+{{ else if .IsPage }}
+  {{ $data := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "datePublished" (.Date.Format "2006-01-02")
+    "description" .Params.description
+    "image" ("og-default.png" | absURL)
+    "author" (dict "@type" "Organization" "name" site.Title)
+    "publisher" (dict
+      "@type" "Organization"
+      "name" site.Title
+      "logo" (dict "@type" "ImageObject" "url" ("logo.svg" | absURL))
+    )
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  }}
+  {{ with .Params.tags }}{{ $data = merge $data (dict "keywords" (delimit . ", ")) }}{{ end }}
+  <script type="application/ld+json">
+  {{ $data | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ else }}
+  {{ $url := .Permalink }}
+  {{ with .Scratch.Get "canonicalURL" }}{{ $url = . }}{{ end }}
+  {{ $data := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "name" .Title
+    "description" (.Params.description | default site.Params.description)
+    "url" $url
+  }}
+  <script type="application/ld+json">
+  {{ $data | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}

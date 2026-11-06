@@ -7,7 +7,7 @@ learning, quantitative finance, and systems engineering.
 
 ### Ticklog
 High-performance logging library for Rust. 5–7 ns per call with
-lock-free per-thread buffers and a background drain thread — built
+lock-free per-thread buffers and a background drain thread - built
 for HFT and latency-sensitive systems.
 https://crates.io/crates/ticklog
 
