@@ -22,3 +22,6 @@
 
 ## Links
 - GitHub: https://github.com/tensorbinge
+
+## Writing
+- Blog: https://tensorbinge.com/blog/

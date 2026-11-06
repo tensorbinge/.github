@@ -1,0 +1,5 @@
+{{ with .Params.tags }}
+<span class="post-tags">
+  {{ range $i, $tag := . }}{{ with index site.Taxonomies.tags (lower $tag) }}<a class="tag" href="{{ .Page.RelPermalink }}">{{ $tag }}</a>{{ else }}<span class="tag">{{ $tag }}</span>{{ end }}{{ end }}
+</span>
+{{ end }}

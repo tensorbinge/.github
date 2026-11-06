@@ -1,0 +1,15 @@
+{{ define "canonical" }}
+{{ $url := (.Paginate .Pages).URL | absURL }}
+{{ .Scratch.Set "canonicalURL" $url }}
+<link rel="canonical" href="{{ $url }}">
+{{ end }}
+{{ define "main" }}
+    {{ with .Paginator.Pages }}
+      <div class="post-list">
+        {{ range . }}{{ partial "post-row.html" . }}{{ end }}
+      </div>
+    {{ else }}
+      <p class="post-empty">No posts yet.</p>
+    {{ end }}
+    {{ partial "list-pager.html" .Paginator }}
+{{ end }}

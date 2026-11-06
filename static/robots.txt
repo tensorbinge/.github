@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://tensorbinge.com/sitemap.xml
+
+# Explicitly welcome common AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

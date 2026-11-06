@@ -2,13 +2,13 @@
 # Render logo.svg to a square PNG.
 # Usage: ./logo-to-png.sh [SIZE] [INPUT_SVG] [OUTPUT_PNG]
 #   SIZE        square edge length in px (default 460 — matches the GitHub org avatar)
-#   INPUT_SVG   source SVG (default logo.svg)
-#   OUTPUT_PNG  destination PNG (default logo.png)
+#   INPUT_SVG   source SVG (default static/logo.svg)
+#   OUTPUT_PNG  destination PNG (default static/logo.png)
 set -euo pipefail
 
 SIZE="${1:-460}"
-INPUT="${2:-logo.svg}"
-OUTPUT="${3:-logo.png}"
+INPUT="${2:-static/logo.svg}"
+OUTPUT="${3:-static/logo.png}"
 
 if ! [[ "$SIZE" =~ ^[0-9]+$ ]] || [ "$SIZE" -le 0 ]; then
   echo "error: SIZE must be a positive integer (got '$SIZE')" >&2
